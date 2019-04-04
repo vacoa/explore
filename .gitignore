@@ -1,0 +1,23 @@
+## For the project standard structure
+
+## Matlab
+# Windows default autosave extension
+*.asv 
+# OSX / *nix default autosave extension
+*.m~
+# Compiled MEX binaries (all platforms)
+*.mex*
+# Simulink Code Generation
+slprj/
+# Session info
+octave-workspace
+# Simulink autosave extension
+*.autosave
+
+## Windows
+Thumbs.db
+*.ini
+
+## Notebooks
+.ipynb_checkpoints/
+.ipynb_checkpoints/*
