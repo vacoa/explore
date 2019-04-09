@@ -18,7 +18,22 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 2. Add it to the MATLAB<sup>&reg;</sup> path.
 3. Run the `testExplore1` function located in the `test` folder.
 
+## Author
 
+Jonathan Ah Sue: <jonathan.ahsue@gmail.com>
+
+## Thanks
+
+This work is based on several contributions that have been slightly modified:
+
+- Jan (2011). [DataHash](https://www.mathworks.com/matlabcentral/fileexchange/31272-datahash), MATLAB Central File Exchange.
+- Ben Mitch (2002). [rgb.m](https://www.mathworks.com/matlabcentral/fileexchange/1805-rgb-m), MATLAB Central File Exchange.
+
+Thank you !
+
+
+
+## Work in Progress
 
 %% Examples
 
