@@ -1,5 +1,11 @@
 % Example that provides a way to easily deal with different data while
 % keeping the existing graph connections
+rootFolder = [pwd filesep '..'];
+warning('off');
+rmpath(genpath([rootFolder filesep 'example']));
+warning('on');
+addpath(genpath([rootFolder filesep 'test']));
+
 sess = 'sess1';
 explo = Explore().session(sess);
 switch sess
