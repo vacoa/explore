@@ -1,7 +1,4 @@
-function [outputArg1,outputArg2] = nbsession(inputArg1,inputArg2)
-%NBSESSION Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function explo = nbsession(sessName)
+% Function to be use in Jupyter notebook, otherwise fileparts fails
+explo = Explore().session(sessName);
 end
-
