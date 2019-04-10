@@ -293,6 +293,7 @@ classdef Explore < handle
             hist(end+1,1).cmd = cmd;
             hist(end,1).cmdind = ind;
             hist(end,1).status = 'started';
+            hist(end,1).seed = rng;
             hist(end,1).stack = [];
             hist(end,1).startDatestr = datestr(nownum);
             hist(end,1).startDatenum = nownum;
