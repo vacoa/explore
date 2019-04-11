@@ -840,6 +840,8 @@ classdef Explore < handle
                 end
                 highlight(axg,i,'Marker',marker);
             end
+            set(gca,'xtick',[])
+            set(gca,'ytick',[])
             drawnow;
         end
         
