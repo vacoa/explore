@@ -7,7 +7,7 @@ During the first execution of the graph, variables are persisted to the disk whi
 For data-intensive and compute-intensive tasks, one does not necessarily have access to computer clusters or does not necessarily have resources to integrate the experiments into a separated data pipeline tool. In this case, *Explore* is the right tool to persist automatically intermediate results to the disk.
 
 ```
-![Example of *Explore* graph plot](https://github.com/jahsue78/explore/blob/master/fig/explore.png)
+![Example of an Explore graph plot](/fig/explore.png)
 ```
 
 ## What is (not) *Explore* ?
