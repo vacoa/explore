@@ -133,7 +133,8 @@ classdef Explore < handle
             end
             
             % Graph
-            [h.exe.graph,h.exe.edge] = h.getGraph();
+            [h.exe.graph,ginfo] = h.getGraph();
+            h.exe.edge = ginfo.edge;
             nownum = now;
             
             % Plot
@@ -146,7 +147,7 @@ classdef Explore < handle
                 pos = get(h.fig,'Position');
                 pos(1,3) = pos(1,3) + 200;
                 set(h.fig,'Position',pos);
-                [h.exe.axg,h.exe.node] = h.plotGraph(h.exe.graph,h.exe.edge);
+                [h.exe.axg,h.exe.node] = h.plotGraph(h.exe.graph,ginfo);
                 title(['Session "' ses '" of context "' nam '" (' datestr(nownum) ')']);
                 dcm_obj = datacursormode(h.fig);
                 set(dcm_obj,'UpdateFcn',@h.tooltipCallback);
@@ -776,7 +777,7 @@ classdef Explore < handle
             conf.rootFolder = rootFolder;
         end
         
-        function [graph,edge] = getGraph(h)
+        function [graph,ginfo] = getGraph(h)
             edge = [];
             edgeLab = {};
             mat = zeros(size(h.fcn,1));
@@ -784,6 +785,7 @@ classdef Explore < handle
                 f = h.fcn(i,1);
                 lab{1,i} = [' @' func2str(f.handle) ' "' f.name '" '];
                 labInd{1,i} = num2str(i);
+                labView{1,i} = '';
                 for j=1:size(f.inStr,2)
                     str = strsplit(f.inStr{1,j},'_');
                     indFcn = find(ismember({h.fcn.name},str{1,1}),1);
@@ -800,9 +802,19 @@ classdef Explore < handle
                 end
             end
             graph = digraph(mat,labInd);
+            ginfo.edge = edge;
+            ginfo.edgeLab = edgeLab;
+            ginfo.lab = lab;
+            ginfo.labInd = labInd;
+            ginfo.labView = labView;
         end
         
-        function [axg, node] = plotGraph(graph,edge)
+        function [axg, node] = plotGraph(h,graph,ginfo)
+            edge = ginfo.edge;
+            edgeLab = ginfo.edgeLab;
+            lab = ginfo.lab;
+            labView = ginfo.labView;
+
             axg = plot(graph);
             axg.LineWidth = 1;
             axg.EdgeAlpha = 1;
@@ -814,11 +826,7 @@ classdef Explore < handle
             yd = get(axg, 'YData')+0.22;
             node = text(xd, yd, lab, 'FontSize',10, 'FontWeight','bold', 'HorizontalAlignment','left', 'VerticalAlignment','middle','Rotation',-20,'BackgroundColor','w','EdgeColor','k','Margin',1,'LineWidth',1);
             labeledge(axg,edge(:,1)',edge(:,2)',edgeLab');
-            tmp = {};
-            for i=1:size(h.fcn,1)
-                tmp = [tmp {''}];
-            end
-            axg.NodeLabel = tmp;
+            axg.NodeLabel = labView;
             for i=1:size(h.fcn,1)
                 switch h.fcn(i,1).class
                     case 'root'
