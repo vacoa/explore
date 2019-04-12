@@ -29,7 +29,7 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 ## Quick Start
 
 1. Download this repository.
-2. Add the `./test` folder to the MATLAB<sup>&reg;</sup> path.
+2. Add the `./test` and the `./src` folders to the MATLAB<sup>&reg;</sup> path.
 3. Run the `./test/testExplore1.m` function.
 
 ## Resources
