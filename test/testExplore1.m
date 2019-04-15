@@ -25,7 +25,7 @@ explo.addFcn('m1',fcn,{},{'s1','s2'},'class','branch');
 explo.addFcn('m2',@fcnTestexp2,{'m1_s2','m1_s1','v1_s3'},{'s1'});
 explo.addFcn('m3',@fcnTestexp3,{'m1_s1','m2_s1'},{'s3'},'class','leaf');
 
-explo.init('plot',false);
+explo.init('plot',true);
 
 explo.setVariable('v1_s3',3);
 explo.run('-e:m3');
