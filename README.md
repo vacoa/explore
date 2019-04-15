@@ -32,7 +32,7 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 2. Add the `./test` and the `./src` folders to the MATLAB<sup>&reg;</sup> path.
 3. Run the `./test/testExplore1.m` function.
 
-## Resources
+## Tutorial
 
 A complete description of the important concepts of *Explore* is available in the form of a Jupyter notebook [here](/example/notebook/tutorial1.ipynb) (`./example/notebook/tutorial1.ipynb`). You can either read and copy the command in your MATLAB<sup>&reg;</sup> editor or install Jupyter with a Matlab kernel.
 
