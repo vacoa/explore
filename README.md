@@ -16,7 +16,7 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 
 1. Download this repository.
 2. Add the `./test` and the `./src` folders to the MATLAB<sup>&reg;</sup> path.
-3. Run and read the comments of the `./test/testExplore0.m` script.
+3. Run and read the comments of the [`./test/testExplore0.m`](/test/testExplore0.m) script.
 
 ## Tutorial
 
