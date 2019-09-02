@@ -22,7 +22,7 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 
 - **Basics**: Run and read the [`./test/testExplore0.m`](/test/testExplore0.m) script.
 - **Confirmed**: Run and read the [`./test/testExplore1.m`](/test/testExplore1.m) script.
-- **Advanced**: A complete description of the important concepts of *Explore* is available in the form of a Jupyter notebook ([`./example/notebook/tutorial1.ipynb`](/example/notebook/tutorial1.html)). You can either read and copy the command in your MATLAB<sup>&reg;</sup> editor or install Jupyter with a Matlab kernel.
+- **Advanced**: A complete description of the important concepts of *Explore* is available in the form of a Jupyter notebook ([`./example/notebook/tutorial1.ipynb`](/example/notebook/tutorial1.ipynb)). You can either read and copy the command in your MATLAB<sup>&reg;</sup> editor or install Jupyter with a Matlab kernel.
 
 ## What is (not) *Explore* ?
 
