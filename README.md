@@ -38,7 +38,7 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 
 ## Tutorial
 
-A complete description of the important concepts of *Explore* is available in the form of a Jupyter notebook [here](/example/notebook/tutorial1.ipynb) (`./example/notebook/tutorial1.ipynb`). You can either read and copy the command in your MATLAB<sup>&reg;</sup> editor or install Jupyter with a Matlab kernel.
+A complete description of the important concepts of *Explore* is available in the form of a Jupyter notebook [here](/example/notebook/tutorial1.html) (`./example/notebook/tutorial1.ipynb`). You can either read and copy the command in your MATLAB<sup>&reg;</sup> editor or install Jupyter with a Matlab kernel.
 
 ## Author
 
