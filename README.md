@@ -2,14 +2,6 @@
 
 *Explore* is a **scientific workflow management tool** for MATLAB<sup>&reg;</sup> experiments. You can visualize the data provenance graph and when your code is changed, only the necessary functions are re-executed to provide an updated version of your data. This can save a lot of time, especially when experiments are constantly refined.
 
-## Summary
-
-*Explore* is a MATLAB<sup>&reg;</sup> class which implements automatic persistent memoization [1]. You can easily declare an experiment as a *directed acyclic graph* (DAG) where the nodes are functions and the edges represent variables that are produced and consumed by functions. 
-
-During the first execution of the graph, variables are persisted to the disk which implies a longer graph execution time (due to variable loading and saving). However, for future executions, if the node and all the sub-functions called within the node remain unchanged, the results will simply be retrieved.
-
-For data-intensive and compute-intensive tasks, one does not necessarily have access to computer clusters or does not necessarily have resources to integrate the experiments into a separated data pipeline tool. In this case, *Explore* is the right tool to persist automatically intermediate results to the disk.
-
 ![Example of an Explore graph plot](/fig/explore.png)
 
 ## Quick Start
@@ -41,6 +33,14 @@ For data-intensive and compute-intensive tasks, one does not necessarily have ac
 
 - a substitute to workflow schedulers like Apache Airflow 
 - designed to parallelize tasks. Indeed, the hashes of the persisted data are computed using the function full paths as input. Therefore, running an unchanged graph from another location will trigger re-computations even if the code remains unchanged
+
+## How it Works
+
+*Explore* is a MATLAB<sup>&reg;</sup> class which implements automatic persistent memoization [1]. You can easily declare an experiment as a *directed acyclic graph* (DAG) where the nodes are functions and the edges represent variables that are produced and consumed by functions. 
+
+During the first execution of the graph, variables are persisted to the disk which implies a longer graph execution time (due to variable loading and saving). However, for future executions, if the node and all the sub-functions called within the node remain unchanged, the results will simply be retrieved.
+
+For data-intensive and compute-intensive tasks, one does not necessarily have access to computer clusters or does not necessarily have resources to integrate the experiments into a separated data pipeline tool. In this case, *Explore* is the right tool to persist automatically intermediate results to the disk.
 
 ## Author
 
