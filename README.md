@@ -1,5 +1,9 @@
 # Explore
 
+*Explore* is a **scientific workflow management tool** for MATLAB<sup>&reg;</sup> experiments. You can visualize the data provenance graph and when your code is changed, only the necessary functions are re-executed to provide an updated version of your data. This can save a lot of time, especially when experiments are constantly refined.
+
+## Summary
+
 *Explore* is a MATLAB<sup>&reg;</sup> class which implements automatic persistent memoization [1]. You can easily declare an experiment as a *directed acyclic graph* (DAG) where the nodes are functions and the edges represent variables that are produced and consumed by functions. 
 
 During the first execution of the graph, variables are persisted to the disk which implies a longer graph execution time (due to variable loading and saving). However, for future executions, if the node and all the sub-functions called within the node remain unchanged, the results will simply be retrieved.
