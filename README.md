@@ -42,9 +42,9 @@ During the first execution of the graph, variables are persisted to the disk whi
 
 For data-intensive and compute-intensive tasks, one does not necessarily have access to computer clusters or does not necessarily have resources to integrate the experiments into a separated data pipeline tool. In this case, *Explore* is the right tool to persist automatically intermediate results to the disk.
 
-## Author
+## Paper and Author
 
-This work is authored by Jonathan Ah Sue (<jonathan.ahsue@gmail.com>).
+This work has been published in [4] and is authored by Jonathan Ah Sue (<jonathan.ahsue@gmail.com>).
 
 ## References
 
@@ -60,6 +60,8 @@ A nice overview on the concepts used in this work as well as the motivations of 
 [2] Sandve, Geir Kjetil, et al. "Ten simple rules for reproducible computational research." (2013): e1003285.
 
 [3] Kluyver, Thomas, et al. "Jupyter Notebooks-a publishing format for reproducible computational workflows." *ELPUB*. 2016.
+
+[4] Ah Sue, Jonathan, et al. "Optimizing Exploratory Workflows for Embedded Platform Trace Analysis and Its Application to Mobile Devices." *International Conference on Human-Computer Interaction*. Springer, Cham, 2019.
 
 Thank you !
 
