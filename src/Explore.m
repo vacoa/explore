@@ -868,7 +868,7 @@ classdef Explore < handle
             pred = predecessors(graph,node);
             for i=1:size(pred,1)
                 if ~any(ismember(par,pred{i,1}))
-                    par = [par; h.parents(graph, pred{i,1},par)];
+                    par = unique([par; h.parents(graph, pred{i,1},par)]);
                 end
             end
             par = [par ;{node}];
